@@ -1,0 +1,20 @@
+---
+  
+ - name: creating lvs
+   hosts: all
+   tasks:
+
+     - name: creating my lv
+       lvol:
+          lv: shiva_lv
+          vg: test_vg
+          size: 100
+
+     - name: creating directory
+       file:
+          path: /shiva
+          state: directory
+
+
+
+

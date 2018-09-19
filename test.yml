@@ -1,0 +1,12 @@
+
+---
+
+ - name: tst
+   hosts: localhost
+   connection: local
+   tasks:
+      - name: test purpose
+        apt: 
+          name: apache2
+          state: present
+

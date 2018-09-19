@@ -1,0 +1,14 @@
+---
+
+ - name: copu
+   hosts: localhost
+   connection: local
+   tasks:
+
+    - name: copy file
+      copy: 
+         src: /home/admin/one
+         dest: /home/shiva/smekala/
+
+
+ 

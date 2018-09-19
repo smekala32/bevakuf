@@ -1,0 +1,19 @@
+---
+
+ - name: upgrading server
+   hosts: localhost
+   connection: local
+   tasks:
+
+      - name: upgrade
+        apt:
+          name: "*"
+          state: latest
+          force_apt_get: yes
+         
+
+      - name: dist
+        apt:
+          upgrade: yes
+          update_cache: yes
+          autoclean: yes

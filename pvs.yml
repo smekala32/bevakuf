@@ -1,0 +1,11 @@
+---
+
+ - name: createting pvs
+   hosts: all
+   tasks:
+
+    - name: creating pvs by adding disks
+      lvg:
+        vg: test_vg
+        pvs: /dev/sdb
+        state: present

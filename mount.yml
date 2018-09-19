@@ -1,0 +1,17 @@
+---
+
+
+ - name: mounting fs
+   hosts: all
+   tasks:
+
+   - name: Create a ext2 filesystem on /dev/sdb1
+     filesystem:
+             fstype: ext4
+             dev: /dev/mapper/test_vg-shiva_lv
+   - name: mounting my fs   
+     mount:
+        path: /shiva
+        src: /dev/mapper/test_vg-shiva_lv
+        fstype: ext4
+        state: present
